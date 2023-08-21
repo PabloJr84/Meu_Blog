@@ -112,31 +112,30 @@
                 </div>
                 <div class="col-md-12 pb-5">
                     <div class="contact-form">
-                        <?php if (!$submitted): ?>
-                        <!-- Formulário de contato -->
+                        <div id="success"></div>
                         <form method="post" action="contact.php">
                             <div class="control-group">
-                                <input type="text" class="form-control" id="name" placeholder="Nome" required="required" data-validation-required-message="Please enter your name" />
+                                <input type="text" class="form-control" name="name" placeholder="Nome" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control" id="email" placeholder="e-mail" required="required" data-validation-required-message="Please enter your email" />
+                                <input type="email" class="form-control" name="email" placeholder="E-mail" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Assunto" required="required" data-validation-required-message="Please enter a subject" />
+                                <input type="text" class="form-control" name="subject" placeholder="Assunto" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control" rows="8" id="message" placeholder="Mensagem" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <textarea class="form-control" rows="8" name="message" placeholder="Mensagem" required="required"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary" type="submit" id="sendMessageButton">Enviar Mensagem</button>
+                                <button class="btn btn-primary" type="submit" name="submit" id="sendMessageButton">Enviar Mensagem</button>
                             </div>
                         </form>
                     </div>
-                </div>
+                </div>            
             </div>
             <!-- Contact End -->
 
