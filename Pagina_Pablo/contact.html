@@ -112,8 +112,9 @@
                 </div>
                 <div class="col-md-12 pb-5">
                     <div class="contact-form">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <?php if (!$submitted): ?>
+                        <!-- Formulário de contato -->
+                        <form method="post" action="contact.php">
                             <div class="control-group">
                                 <input type="text" class="form-control" id="name" placeholder="Nome" required="required" data-validation-required-message="Please enter your name" />
                                 <p class="help-block text-danger"></p>
@@ -160,8 +161,9 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <script src="contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
